@@ -1248,6 +1248,26 @@ align-items: center;
   margin-left: 0;
   margin-top: 12px;
 }
+#values .row{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.values__desc--wrapper{
+  padding: 0;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+.value{
+  align-items: center;
+  margin-right: 0;
+}
+.values__img{
+  width: 100%;
+}
+#values .section__tag{
+  margin-top: 32px;
+}
 #testimonials .row{
   display: flex;
   flex-direction: column;
