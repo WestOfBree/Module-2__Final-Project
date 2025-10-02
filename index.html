@@ -7,6 +7,7 @@
     <title>Module 2 Final Project</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="https://kit.fontawesome.com/bb4761e2f4.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>"
 </head>
 
 <body>
@@ -26,7 +27,30 @@
                         <li><a href="" class="nav__link no-cursor login"> Login</a></li>
                         <li><a href="" class="nav__link--primary no-cursor">Sign Up</a></li>
                     </ul>
-                    <button class="menu__boop"><i class="fa-solid fa-bars menu__boop"></i></button>
+                    <button class="menu__boop" onclick="openMenu()"><i class="fa-solid fa-bars menu__boop"></i></button>
+                    <div class="menu__backdrop">
+                        <button class="menu__close" onclick="closeMenu()"><i class="fa-solid fa-times"></i></button>
+                        <ul class="menu__list">
+                            <li class="menu__link">
+                                <a href="" >About</a>
+                            </li>
+                             <li class="menu__link">
+                                <a href="" onclick="closeMenu()">Blog</a>
+                            </li>
+                             <li class="menu__link">
+                                <a href="#pricing" onclick="closeMenu()" >Pricing</a>
+                            </li>
+                             <li class="menu__link">
+                                <a href="" onclick="closeMenu()">Contact Us</a>
+                            </li>
+                             <li class="menu__link">
+                                <a href="" onclick="closeMenu()">Login</a>
+                            </li>
+                             <li class="menu__link">
+                                <button class="boop menu__link--sign-up" onclick="closeMenu()">Sign Up</button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>

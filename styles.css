@@ -174,7 +174,8 @@ color: #6415ff;
 .login {
   margin-left: 48px;
 }
-.nav__link--primary {
+.nav__link--primary,
+.menu__link--sign-up {
   margin: 0;
   padding: 10px 32px;
   margin-top: 2px;
@@ -186,9 +187,70 @@ color: #6415ff;
   width: auto;
   transition: all 300ms ease;
 }
-.nav__link--primary:hover {
+.nav__link--primary:hover,
+.menu__link--sign-up:hover {
   background-color: rgba(80, 17, 204);
 } /*speaking of hover, dont forget to add the link hover effect */
+/* 
+
+Mobile Menu Styles 
+
+*/
+.menu__backdrop{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid rgb(229, 231, 235);
+  padding: 32px;
+  margin: 24px 16px;
+  height: 378px;
+  z-index: 6;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 300ms ease;
+  transform: translateX(300%);
+}
+.menu--open .menu__backdrop{
+  visibility: visible;
+  display: flex;
+  opacity: 1;
+  transform: translateX(0%);
+}
+.menu__close{
+  display: block;
+  position: fixed;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  right: 35px;
+  top: 45px;
+  cursor: pointer;
+}
+.menu__list{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu__link,
+.menu__link--sign-up{
+  color: #1a202c;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  margin: 8px 0;
+}
+.menu__link--sign-up{
+  padding: 12px 32px;
+  color: #fff;
+  margin: 8px 0;
+}
 
 /* 
 
@@ -801,6 +863,7 @@ top: -240px;
 .start__row {
   margin: 0 auto;
   max-width: 1024px;
+  padding: 0 32px;
 }
 .start__title,
 .start__boops{
@@ -1100,7 +1163,8 @@ align-items: center;
   font-size: 30px;
   line-height: 1.25;
 }
-.section__text{
+.section__text,
+.section__desc{
   font-size: 14px;
 }
 .nav__links{
@@ -1184,5 +1248,64 @@ align-items: center;
   margin-left: 0;
   margin-top: 12px;
 }
-
+#testimonials .row{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.testimonials__img,
+.testimonials__desc--wrapper{
+  width: 100%;
+  padding-left: 0;
+}
+.testimonial__bottom,
+.testimonial__profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonial__details{
+  margin-left: 0;
+  margin-top: 8px;
+}
+.testimonial__boops{
+  margin-top: 24px;
+}
+.start__title{
+  font-size: 24px;
+}
+.start__boops{
+  display: flex;
+  flex-direction: column;
+}
+.start__boop--get-started,
+.start__boop--contact{
+  padding: 12px 24px;
+  font-size: 14px;
+}
+.start__boop--contact{
+  margin-top: 16px;
+}
+.start__container{
+  padding: 80px 0;
+}
+.footer__columns{
+  justify-content: center;
+}
+.footer__column{
+  width: auto;
+  padding: 0 16px;
+  text-align: center;
+  align-items: center;
+}
+.footer__bottom{
+  display: flex;
+  flex-direction: column;
+}
+.footer__copyright{
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 32px 0;
+}
 }
